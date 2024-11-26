@@ -40,8 +40,8 @@ cd f5_ltm_upgrade
 
 * create a file called "f5devices.txt" and add the devices to be upgarded along with image in the below format
 ```
-F5-2-lab 10.124.5.244 BIGIP-15.1.6-0.0.8.iso
-F5-1-lab 10.124.5.243 BIGIP-15.1.6-0.0.8.iso
+F5-2-lab "F5 ip"      BIGIP-17.1.6-0.0.8.iso
+F5-1-lab "ip address" BIGIP-17.1.6-0.0.8.iso
 ```
 
 * To run the automation exceute the below command
@@ -55,5 +55,5 @@ python start_upgrade.py
 ```
 python backout_upgrade.py -b <deviceip>backout.txt
 eg:
-python backout_upgrade.py -b 10.124.5.244backout.txt
+python backout_upgrade.py -b "F5 IP " backout.txt
 ```
